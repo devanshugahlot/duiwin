@@ -514,21 +514,22 @@ const betWinGo = async (req, res) => {
 
   if (check >= 0) {
     const sql = `INSERT INTO minutes_1 SET 
-        id_product = ?,
-        phone = ?,
-        code = ?,
-        invite = ?,
-        stage = ?,
-        level = ?,
-        money = ?,
-        amount = ?,
-        fee = ?,
-        get = ?,
-        game = ?,
-        bet = ?,
-        status = ?,
-        today = ?,
-        time = ?`;
+    id_product = ?,
+    phone = ?,
+    code = ?,
+    invite = ?,
+    stage = ?,
+    level = ?,
+    money = ?,
+    amount = ?,
+    fee = ?,
+    \`get\` = ?,
+    game = ?,
+    bet = ?,
+    status = ?,
+    today = ?,
+    time = ?`;
+
     await connection.query(sql, [
       id_product,
       userInfo.phone,
